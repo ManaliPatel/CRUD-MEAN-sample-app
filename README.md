@@ -16,6 +16,8 @@ Express and MongoDB as backend and React as frontend.
 
 ## To start this project:
 
-npm install in server and client both folders
-npm run devStart (to start server - backend)
-npm start (to start client - frontend)
+```
+npm install in server and client both folders \n
+npm run devStart (to start server - backend) \n
+npm start (to start client - frontend) \n
+```
