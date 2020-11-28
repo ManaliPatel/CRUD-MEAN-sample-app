@@ -1,7 +1,7 @@
-## Intro:
+## CRUD-MERN-sample-app
 
-Followed this video for this project: https://www.youtube.com/watch?v=wgGkF4k9c7A
-Express and MongoDB as backend and React as frontend.
+- Followed this video for this project: https://www.youtube.com/watch?v=wgGkF4k9c7A
+- Express and MongoDB as backend and React as frontend.
 
 ## following libraries are used:
 
@@ -17,7 +17,7 @@ Express and MongoDB as backend and React as frontend.
 ## To start this project:
 
 ```
-npm install in server and client both folders \n
-npm run devStart (to start server - backend) \n
-npm start (to start client - frontend) \n
+npm install (in server and client both folders)
+npm run devStart (to start server - backend)
+npm start (to start client - frontend)
 ```
