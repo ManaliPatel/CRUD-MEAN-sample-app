@@ -4,17 +4,57 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #e1e2ef;
 }
 
-.test {
-  border-style: solid;
-  margin: 5px;
+.textColor {
+  color: #282f44;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
 }
 
-input,
+input[type="text"] {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  /* box-sizing: border-box; */
+  outline-width: 0;
+}
+
+input[type="number"] {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  outline-width: 0;
+}
+
 button {
-  width: 200px;
-  height: 30px;
-  font-size: 20px;
-  margin: 5px;
+  background-color: #555555;
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  outline-width: 0;
+}
+
+.addbutton {
+  background-color: #555555;
+  border: none;
+  color: white;
+  padding: 12px 131px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  outline-width: 0;
+}
+
+.food {
+  width: 600px;
+  height: 200px;
+  border: 2px solid #555555;
+  margin: 10px;
 }

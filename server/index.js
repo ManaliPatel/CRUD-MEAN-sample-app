@@ -44,12 +44,12 @@ app.put("/update", async(req,  res) => {
 });
 
 app.get("/read", async(req,  res) => {
-    FoodeModel.find({}, (err, result) => {
-        if(err){
-            res.send(err)
-        }
-        res.send(result)
-    })
+    try{
+        const foodList = await FoodeModel.find({}).sort({_id: -1});
+        res.json(foodList);
+    }catch(err){
+        res.json("oops! foods are not found!");
+    }
 });
 
 app.delete("/delete/:id", async(req,res) => {
