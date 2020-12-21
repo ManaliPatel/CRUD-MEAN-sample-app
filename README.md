@@ -21,3 +21,11 @@ npm install (in server and client both folders)
 npm run devStart (to start server - backend)
 npm start (to start client - frontend)
 ```
+
+## To run cypress tests:
+
+```
+start localhost for frontend and backend
+cd client
+npm run cytest OR npx cypress run
+```
