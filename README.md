@@ -2,6 +2,7 @@
 
 - Followed this video for this project: https://www.youtube.com/watch?v=wgGkF4k9c7A
 - Express and MongoDB as backend and React as frontend.
+- I wrote cypress tests afterwards
 
 ## following libraries are used:
 
