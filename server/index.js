@@ -36,7 +36,7 @@ app.put("/update", async(req,  res) => {
        await FoodeModel.findById(id, (err, updatedFood) => {
             updatedFood.foodName = newFoodName
             updatedFood.save();
-            res.send('update');
+            res.send(updatedFood);
         })
     } catch(err){
         console.log(err);
