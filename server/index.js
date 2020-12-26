@@ -9,7 +9,7 @@ const Food = require('./models/Food');
 app.use(express.json())
 app.use(cors());
 mongoose.connect(
-    "mongodb+srv://newuser:manali1234@cluster0.usaud.mongodb.net/food?retryWrites=true&w=majority", 
+    "mongodb+srv://manali:1234@cluster0.pivmc.mongodb.net/food?retryWrites=true&w=majority",
    {
     useNewUrlParser: true,
    }

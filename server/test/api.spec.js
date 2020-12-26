@@ -1,45 +1,19 @@
 const fetch = require("node-fetch");
 const { expect } = require('chai');
-
-function readApi(){
-    return new Promise((resolve, reject) => {
-        fetch("http://localhost:3001/read").then((result) => {
-            if(result.status == 200){
-                resolve(result.json())
-            } else {
-                reject('Error')
-            }
-        })
-    })
-}
-
-function updateApi(id, newFoodName){
-    var body = {
-        id: id,
-        newFoodName: newFoodName
-    }
-    return new Promise((resolve, reject) => {
-        fetch("http://localhost:3001/update", 
-            { method: 'PUT', 
-              body: JSON.stringify(body),
-              headers: { 'Content-Type': 'application/json' }
-            })
-        .then((result) => {
-            if(result.status == 200){
-                resolve(result.json())
-            } else {
-                reject(result)
-            }
-        })
-    })
-}
+const { readApi, updateApi } = require('./helper/api-helper');
 
 describe('my first promise test', () => {
     it('test', () => {
         return readApi().then((result) => {
-            expect(result.length).to.eq(3)
-            expect(result.map(food => food.foodName)).to.eql(['test','test','test'])
+            expect(result.length).to.eq(2)
+            expect(result.map(food => food.foodName)).to.eql([ 'test2', 'test1' ])
         })
+    })
+
+    it('test using await and async', async () => {
+        let result = await readApi();
+        expect(result.length).to.eq(2)
+        expect(result.map(food => food.foodName)).to.eql([ 'test2', 'test1' ])
     })
 
     it('updates', () => {
@@ -50,8 +24,8 @@ describe('my first promise test', () => {
             return updateApi(id, foodName).then((result) => {
                 expect(result.foodName).to.eql(foodName)
                 return readApi().then((resultOne) => {
-                    expect(resultOne.length).to.eq(3)
-                    expect(resultOne.map(food => food.foodName)).to.eql([ foodName, 'werwerwr', 'test' ])
+                    expect(resultOne.length).to.eq(2)
+                    expect(resultOne.map(food => food.foodName)).to.eql([ foodName, 'test1'])
                 })
             })
         })
