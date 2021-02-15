@@ -2,7 +2,7 @@
 
 - Followed this video for this project: https://www.youtube.com/watch?v=wgGkF4k9c7A
 - Express and MongoDB as backend and React as frontend.
-- I wrote cypress tests afterwards
+- Wrote cypress tests and api tests afterwards
 
 ## following libraries are used:
 
@@ -29,4 +29,12 @@ npm start (to start client - frontend)
 start localhost for frontend and backend
 cd client
 npm run cytest OR npx cypress run
+```
+
+## To run api tests:
+
+```
+start localhost for frontend and backend
+cd server
+npx mocha
 ```
